@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.2"
+   width="15.491685mm"
+   height="7.2084479mm"
+   viewBox="0 0 8.8156244 4.1020049"
+   id="svg6909"
+   sodipodi:docname="020bf2.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata6915">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6913" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview6911"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.60132576"
+     inkscape:cx="302.36681"
+     inkscape:cy="-42.837965"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6909" />
+  <!-- Page: 1/1 -->
+  <text
+     font-size="2.2001"
+     id="text6885"
+     style="font-size:2.20009995px;font-family:'Century Schoolbook L';text-anchor:start;fill:currentColor"
+     x="-8.5350876"
+     y="-1">
+    <tspan
+       id="tspan6883" />
+  </text>
+  <g
+     id="g6951"
+     transform="translate(-14.225688,-3.8453)">
+    <g
+       id="g6938">
+      <g
+         id="g6926">
+        <line
+           id="line6887"
+           y2="0"
+           x2="8.7642002"
+           y1="0"
+           x1="0.050000001"
+           transform="translate(14.2264,7.8973)"
+           style="stroke:currentColor;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round" />
+        <line
+           id="line6889"
+           y2="0"
+           x2="8.7642002"
+           y1="0"
+           x1="0.050000001"
+           transform="translate(14.2264,6.8973)"
+           style="stroke:currentColor;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round" />
+        <line
+           id="line6891"
+           y2="0"
+           x2="8.7642002"
+           y1="0"
+           x1="0.050000001"
+           transform="translate(14.2264,5.8973)"
+           style="stroke:currentColor;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round" />
+        <line
+           id="line6893"
+           y2="0"
+           x2="8.7642002"
+           y1="0"
+           x1="0.050000001"
+           transform="translate(14.2264,4.8973)"
+           style="stroke:currentColor;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round" />
+        <line
+           id="line6895"
+           y2="0"
+           x2="8.7642002"
+           y1="0"
+           x1="0.050000001"
+           transform="translate(14.2264,3.8973)"
+           style="stroke:currentColor;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round" />
+        <path
+           id="path6897"
+           d="m 557,-125 c 0,28 23,51 51,51 28,0 51,-23 51,-51 0,-28 -23,-51 -51,-51 -28,0 -51,23 -51,51 z m 0,250 c 0,28 23,51 51,51 28,0 51,-23 51,-51 0,-28 -23,-51 -51,-51 -28,0 -51,23 -51,51 z M 232,263 c 172,0 293,-88 293,-251 0,-263 -263,-414 -516,-521 -3,-3 -6,-4 -9,-4 -7,0 -13,6 -13,13 0,3 1,6 4,9 202,118 412,265 412,493 0,120 -63,235 -171,235 -74,0 -129,-54 -154,-126 11,5 22,8 34,8 C 167,119 212,74 212,19 212,-39 168,-87 112,-87 52,-87 0,-40 0,19 0,152 102,263 232,263 Z"
+           transform="matrix(0.004,0,0,-0.004,15.0264,4.8973)"
+           inkscape:connector-curvature="0"
+           style="fill:currentColor" />
+        <a
+           id="a6901"
+           xlink:href="textedit:///Users/jyang/Documents/github/pitlOS/lilypond/020bf2.ly:11:2:3"
+           style="color:inherit">
+          <path
+             id="path6899"
+             d="m 220,138 c 56,0 109,-29 109,-91 0,-72 -56,-121 -103,-149 -36,-21 -76,-36 -117,-36 -56,0 -109,29 -109,91 0,72 56,121 103,149 36,21 76,36 117,36 z"
+             transform="matrix(0.004,0,0,-0.004,20.0264,6.8973)"
+             inkscape:connector-curvature="0"
+             style="fill:currentColor" />
+        </a>
+        <path
+           id="path6903"
+           d="m 27,41 -1,-66 v -11 c 0,-22 1,-44 4,-66 45,38 93,80 93,139 0,33 -14,67 -43,67 C 49,104 28,74 27,41 Z m -42,-179 -12,595 c 8,5 18,8 27,8 9,0 19,-3 27,-8 L 20,112 c 25,21 58,34 91,34 52,0 89,-48 89,-102 0,-80 -86,-117 -147,-169 -15,-13 -24,-38 -45,-38 -13,0 -23,11 -23,25 z"
+           transform="matrix(0.004,0,0,-0.004,18.8764,6.8973)"
+           inkscape:connector-curvature="0"
+           style="fill:currentColor" />
+      </g>
+    </g>
+  </g>
+  <text
+     font-size="2.2001"
+     id="text6907"
+     style="font-size:2.20009995px;font-family:'Century Schoolbook L';text-anchor:start;fill:currentColor"
+     x="45.525112"
+     y="161.74969">
+    <tspan
+       id="tspan6905" />
+  </text>
+</svg>
