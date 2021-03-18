@@ -15,11 +15,11 @@ For Example: [https://pitl.justinyang.net/?parts=4](https://pitl.justinyang.net/
 https://pitl.justinyang.net/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15 will display the full score with all 16 parts
 
 ### **SCORE CONTROLS:**
-On-screen score controls are available, normally for the conductor or performace manager.
+On-screen score controls are available, normally for the conductor or performance manager.
 To display score controls, add this additional text to the URL after the parts: **&controls=yes**
 For Example: [https://pitl.justinyang.net/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15&controls=yes]( https://pitl.justinyang.net/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15&controls=yes) will display the full score and the performance controls.
 
-**Start Button:** This will start the piece for all connected parts. Once **Start** is pressed, the **Pause** and **Stop** buttons will become active and the panel will minimize, dissapering. The panel is accessed again by hovering the mouse in the upper-left corner of the browser window. A white toolbar will appear. Clicking the arrow on the right-hand side of the toolbar will expand the control panel.
+**Start Button:** This will start the piece for all connected parts. Once **Start** is pressed, the **Pause** and **Stop** buttons will become active and the panel will minimize, disappearing. The panel is accessed again by hovering the mouse in the upper-left corner of the browser window. A white toolbar will appear. Clicking the arrow on the right-hand side of the toolbar will expand the control panel.
 
 **Time Sec:** Enter the time, in seconds, at which you wish to start the piece, then press return/enter on your keyboard, then press the **Start** button to start the piece at that time. Once a time has been entered in the **Time Sec** box and return/enter is pressed, the **Time Sec** box becomes inactive.
 
@@ -27,7 +27,7 @@ For Example: [https://pitl.justinyang.net/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13
 
 **Stop:** Reinitializes the entire piece for all connected parts.
 
-**Ready Indicators/Ready Button:** The P0 - P15 buttons are indicators. Each score that connected without controls, has a ready button. When the ready button is pressed, it will dissappear for the client and the appropriate indicator on the control panel will turn green.
+**Ready Indicators/Ready Button:** The P0 - P15 buttons are indicators. Each score that connected without controls, has a ready button. When the ready button is pressed, it will disappear for the client and the appropriate indicator on the control panel will turn green.
 
 **Clock:** There is a hidden clock in the lower-lefthand corner for all connected parts. Hover to get toolbar and click arrow to expand.
 
