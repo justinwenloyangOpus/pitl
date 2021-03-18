@@ -112,8 +112,8 @@ if (window.location.hostname == 'localhost') {
   tsServer = window.location.hostname + '/timesync';
 }
 const TS = timesync.create({
-  server: tsServer,
-  // server: '/timesync',
+  // server: tsServer,
+  server: '/timesync',
   interval: 1000
 });
 //</editor-fold> > END GLOBAL VARS - TIMESYNC ENGINE END
