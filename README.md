@@ -2,22 +2,22 @@
 ### by Justin Yang
 
 ## **Application Notes:**
-The score can be accessed at: pitl.justinyang.net
+The score can be accessed at: https://pitl.herokuapp.com/
 As this is a web browser based score application, it can be run from any device that runs a web browser and is connected to the internet. Some devices may not be powerful enough to run the score or may cause the score to lag.
 
 ### **PARTS:**
 Any part or combination of parts can be displayed by adjusting arguments in the URL.
-Start with: **https//pitl.justinyang.net/**
+Start with: **https://pitl.herokuapp.com/**
 Add: **?parts=**
 Then: Add the parts you would like displayed separated by a semi-colon - **?parts=1;3;9**
 Parts are numbered from 0.
-For Example: [https://pitl.justinyang.net/?parts=4](https://pitl.justinyang.net/?parts=4) will display the score for player #5
-https://pitl.justinyang.net/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15 will display the full score with all 16 parts
+For Example: [https://pitl.herokuapp.com/?parts=4](https://pitl.herokuapp.com/?parts=4) will display the score for player #5
+https://pitl.herokuapp.com/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15 will display the full score with all 16 parts
 
 ### **SCORE CONTROLS:**
 On-screen score controls are available, normally for the conductor or performance manager.
 To display score controls, add this additional text to the URL after the parts: **&controls=yes**
-For Example: [https://pitl.justinyang.net/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15&controls=yes]( https://pitl.justinyang.net/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15&controls=yes) will display the full score and the performance controls.
+For Example: [https://pitl.herokuapp.com/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15&controls=yes]( https://pitl.herokuapp.com/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15&controls=yes) will display the full score and the performance controls.
 
 **Start Button:** This will start the piece for all connected parts. Once **Start** is pressed, the **Pause** and **Stop** buttons will become active and the panel will minimize, disappearing. The panel is accessed again by hovering the mouse in the upper-left corner of the browser window. A white toolbar will appear. Clicking the arrow on the right-hand side of the toolbar will expand the control panel.
 
