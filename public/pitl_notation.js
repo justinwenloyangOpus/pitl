@@ -113,7 +113,7 @@ let readyBtn_isActive = true;
 // }
 const TS = timesync.create({
   // server: tsServer,
-  server: '/timesync',
+  server: '/timesync2',
   interval: 1000
 });
 //</editor-fold> > END GLOBAL VARS - TIMESYNC ENGINE END
