@@ -3,13 +3,13 @@
 
 ## **Application Notes:**
 The score can be accessed at: https://pitl.justinyang.net/
-As this is a web browser based score application, it can be run from any device that runs a web browser and is connected to the internet. Some devices may not be powerful enough to run the score or may cause the score to lag.
+As this is a web browser based score application, it can be run from any device that runs a web browser and is connected to the internet. Note that some devices may not be powerful enough to run the score or may cause the score to lag.
 
 ### **PARTS:**
 Any part or combination of parts can be displayed by adjusting arguments in the URL.
 Start with: **https://pitl.justinyang.net/**
 Add: **?parts=**
-Then: Add the parts you would like displayed separated by a semi-colon - **?parts=1;3;9**
+Then: Add the parts you would like displayed, separated by a semi-colon - **?parts=1;3;9**
 Parts are numbered from 0.
 For Example: [https://pitl.justinyang.net/?parts=4](https://pitl.justinyang.net/?parts=4) will display the score for player #5
 https://pitl.justinyang.net/?parts=0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15 will display the full score with all 16 parts
