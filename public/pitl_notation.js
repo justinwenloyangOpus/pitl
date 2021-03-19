@@ -105,15 +105,8 @@ let makeControlPanel = false;
 let readyBtn_isActive = true;
 //</editor-fold> END GLOBAL VARS - GATES END
 //<editor-fold>  < GLOBAL VARS - TIMESYNC ENGINE >       //
-// var tsServer;
-// if (window.location.hostname == 'localhost') {
-//   tsServer = '/timesync';
-// } else {
-//   tsServer = window.location.hostname + '/timesync';
-// }
 const TS = timesync.create({
-  // server: tsServer,
-  server: '/timesync2',
+  server: '/timesync',
   interval: 1000
 });
 //</editor-fold> > END GLOBAL VARS - TIMESYNC ENGINE END
