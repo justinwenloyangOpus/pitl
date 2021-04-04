@@ -85,8 +85,8 @@ let readyBtns = [];
 //</editor-fold> END GLOBAL VARS - MISC END
 //<editor-fold>  < GLOBAL VARS - AUDIO >                   //
 let actx;
-let tonegain;
-let tone;
+let tonegain, sawgain;
+let tone, tone2;
 let audResBtn = document.getElementById("audStBtn");
 audResBtn.addEventListener("click", function() {
   actx.resume();
@@ -408,14 +408,29 @@ function initAudio() {
   tone.type = 'sine';
   tone.start();
   tone.connect(tonegain);
+  // Saw Wave Oscillator
+  sawgain = actx.createGain();
+  sawgain.gain.setValueAtTime(0, actx.currentTime);
+  sawgain.connect(actx.destination);
+  sawgain.gain.linearRampToValueAtTime(0.0, actx.currentTime + 0.1);
+  tone2 = actx.createOscillator();
+  tone2.frequency.value = 440;
+  tone2.type = 'sawtooth';
+  tone2.start();
+  tone2.connect(sawgain);
 }
 //FUNCTION playTone ------------------------------------------------------ //
 function playTone(freq) {
   tone.frequency.value = freq;
+  tone2.frequency.value = freq;
   tonegain.gain.setValueAtTime(0, actx.currentTime + 0.05);
-  tonegain.gain.linearRampToValueAtTime(0.15, actx.currentTime + 0.15);
-  tonegain.gain.setValueAtTime(0.15, actx.currentTime + 0.2);
+  tonegain.gain.linearRampToValueAtTime(0.6, actx.currentTime + 0.15);
+  tonegain.gain.setValueAtTime(0.6, actx.currentTime + 0.2);
   tonegain.gain.linearRampToValueAtTime(0, actx.currentTime + 0.55);
+  sawgain.gain.setValueAtTime(0, actx.currentTime + 0.05);
+  sawgain.gain.linearRampToValueAtTime(0.04, actx.currentTime + 0.15);
+  sawgain.gain.setValueAtTime(0.04, actx.currentTime + 0.2);
+  sawgain.gain.linearRampToValueAtTime(0, actx.currentTime + 0.55);
 }
 //</editor-fold> >> END AUDIO END  ////////////////////////////////////////////
 
