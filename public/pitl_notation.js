@@ -308,6 +308,7 @@ async function loadScoreData() {
 
   retrivedFileDataObj = await retriveFile('savedScoreData/sec4TimeCode.txt');
   retrivedFileData = retrivedFileDataObj.fileData;
+  console.log(retrivedFileData);
   retrivedFileData_parsed = JSON.parse(retrivedFileData);
   sec4TimeCode = retrivedFileData_parsed;
 
@@ -1319,7 +1320,8 @@ function mkCtrlPanel_ctrl(id, w, h, title, posArr, headerSize) {
     } else {
       btnX = 37
     }
-    let t_btn = mkButton(canvas, 'readyBtn' + i.toString(), 33, 27, 177 + (40 * (i % 8)), btnX, 'P' + i.toString(), 11, function() {});
+    let playerLbls = ['B4', 'B3', 'B2', 'B1', 'T4', 'T3', 'T2', 'T1', 'A4', 'A3', 'A2', 'A1', 'S4', 'S3', 'S2', 'S1']
+    let t_btn = mkButton(canvas, 'readyBtn' + i.toString(), 33, 27, 177 + (40 * (i % 8)), btnX, playerLbls[i], 11, function() {});
     t_btn.className = 'btn btn-ind_off';
     readyBtns.push(t_btn);
   }
