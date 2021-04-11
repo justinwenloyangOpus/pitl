@@ -1767,7 +1767,7 @@ let displayClock_panel = mkClockPanel(displayClock_div, 'left-bottom');
 displayClock_panel.smallify();
 
 function calcDisplayClock(pieceEpochTime) {
-  let pieceTimeMS = pieceEpochTime - pieceStartTime_epochTime + (clockAdj * 1000);
+  let pieceTimeMS = pieceEpochTime - pieceStartTime_epochTime + ((clockAdj-leadTime) * 1000);
   displayClock_TimeMS = pieceTimeMS % 1000;
   displayClock_TimeSec = Math.floor(pieceTimeMS / 1000) % 60;
   displayClock_TimeMin = Math.floor(pieceTimeMS / 60000) % 60;
