@@ -293,7 +293,6 @@ async function loadScoreData() {
 
   retrivedFileDataObj = await retriveFile('savedScoreData/sec3HocketTimeCode.txt');
   retrivedFileData = retrivedFileDataObj.fileData;
-  console.log(retrivedFileData);
   retrivedFileData_parsed = JSON.parse(retrivedFileData);
   sec3HocketTimeCode = retrivedFileData_parsed;
 
@@ -868,10 +867,9 @@ function mkNotationObject(ix, ptrIX, w, h, len, placementOrder) {
       notationCvsBgRect.setAttributeNS(null, "stroke-width", "0");
     }
     //REMOVE PREVIOUS NOTATION & REPLACE WITH NEW PITCHES
-    for (var i = 1; i < pitchChanges.length; i++) {
+    for (let aix = 1; aix < pitchChanges.length; aix++) {
 
-      if (pitchChanges[i][1] == framect) {
-
+      if (pitchChanges[aix][1] == framect) {
         //blink Notation Container to indicate pitch change
         notationCvsBgRect.setAttributeNS(null, "stroke-width", "20");
         pitchUnblinkFrame = framect + 40;
@@ -880,36 +878,36 @@ function mkNotationObject(ix, ptrIX, w, h, len, placementOrder) {
           for (var l = 0; l < notationCont.children.length; l++) {
             notationCont.removeChild(notationCont.children[l]);
           }
-          currentPitches[ptrIX] = parseFloat(pitchChanges[ix][2][0][ptrIX][1]);
+          currentPitches[ptrIX] = parseFloat(pitchChanges[aix][2][0][ptrIX][1]);
           notationObj.currentPitch = currentPitches[ptrIX];
-          var timg = notes[0][roundByStep(pitchChanges[i][2][0][ix][1], 0.5)];
+          var timg = notes[0][roundByStep(pitchChanges[aix][2][0][ix][1], 0.5)];
           notationCont.appendChild(timg);
         } else if (ix >= 4 && ix < 8) {
           var j = ix - 4;
           for (var l = 0; l < notationCont.children.length; l++) {
             notationCont.removeChild(notationCont.children[l]);
           }
-          currentPitches[ptrIX] = parseFloat(pitchChanges[i][2][1][j][1]);
+          currentPitches[ptrIX] = parseFloat(pitchChanges[aix][2][1][j][1]);
           notationObj.currentPitch = currentPitches[ptrIX];
-          var timg = notes[1][roundByStep(pitchChanges[i][2][1][j][1], 0.5)];
+          var timg = notes[1][roundByStep(pitchChanges[aix][2][1][j][1], 0.5)];
           notationCont.appendChild(timg);
         } else if (ix >= 8 && ix < 12) {
           var j = ix - 8;
           for (var l = 0; l < notationCont.children.length; l++) {
             notationCont.removeChild(notationCont.children[l]);
           }
-          currentPitches[ptrIX] = parseFloat(pitchChanges[i][2][2][j][1]);
+          currentPitches[ptrIX] = parseFloat(pitchChanges[aix][2][2][j][1]);
           notationObj.currentPitch = currentPitches[ptrIX];
-          var timg = notes[2][roundByStep(pitchChanges[i][2][2][j][1], 0.5)];
+          var timg = notes[2][roundByStep(pitchChanges[aix][2][2][j][1], 0.5)];
           notationCont.appendChild(timg);
         } else if (ix >= 12 && ix < 16) {
           var j = ix - 12;
           for (var l = 0; l < notationCont.children.length; l++) {
             notationCont.removeChild(notationCont.children[l]);
           }
-          currentPitches[ptrIX] = parseFloat(pitchChanges[i][2][3][j][1]);
+          currentPitches[ptrIX] = parseFloat(pitchChanges[aix][2][3][j][1]);
           notationObj.currentPitch = currentPitches[ptrIX];
-          var timg = notes[3][roundByStep(pitchChanges[i][2][3][j][1], 0.5)];
+          var timg = notes[3][roundByStep(pitchChanges[aix][2][3][j][1], 0.5)];
           notationCont.appendChild(timg);
         }
       }
@@ -1159,10 +1157,9 @@ function mkNotationObject(ix, ptrIX, w, h, len, placementOrder) {
       notationCvsBgRect.setAttributeNS(null, "stroke-width", "0");
     }
     //REMOVE PREVIOUS NOTATION & REPLACE WITH NEW PITCHES
-    for (var i = 1; i < pitchChanges.length; i++) {
+    for (let bix = 1; bix < pitchChanges.length; bix++) {
 
-      if (pitchChanges[i][1] == framect) {
-
+      if (pitchChanges[bix][1] == framect) {
         //blink Notation Container to indicate pitch change
         notationCvsBgRect.setAttributeNS(null, "stroke-width", "20");
         pitchUnblinkFrame = framect + 40;
@@ -1171,36 +1168,36 @@ function mkNotationObject(ix, ptrIX, w, h, len, placementOrder) {
           for (var l = 0; l < notationCont.children.length; l++) {
             notationCont.removeChild(notationCont.children[l]);
           }
-          currentPitches[ptrIX] = parseFloat(pitchChanges[ix][2][0][ptrIX][1]);
+          currentPitches[ptrIX] = parseFloat(pitchChanges[bix][2][0][ptrIX][1]);
           notationObj.currentPitch = currentPitches[ptrIX];
-          var timg = notes[0][roundByStep(pitchChanges[i][2][0][ix][1], 0.5)];
+          var timg = notes[0][roundByStep(pitchChanges[bix][2][0][ix][1], 0.5)];
           notationCont.appendChild(timg);
         } else if (ix >= 4 && ix < 8) {
           var j = ix - 4;
           for (var l = 0; l < notationCont.children.length; l++) {
             notationCont.removeChild(notationCont.children[l]);
           }
-          currentPitches[ptrIX] = parseFloat(pitchChanges[i][2][1][j][1]);
+          currentPitches[ptrIX] = parseFloat(pitchChanges[bix][2][1][j][1]);
           notationObj.currentPitch = currentPitches[ptrIX];
-          var timg = notes[1][roundByStep(pitchChanges[i][2][1][j][1], 0.5)];
+          var timg = notes[1][roundByStep(pitchChanges[bix][2][1][j][1], 0.5)];
           notationCont.appendChild(timg);
         } else if (ix >= 8 && ix < 12) {
           var j = ix - 8;
           for (var l = 0; l < notationCont.children.length; l++) {
             notationCont.removeChild(notationCont.children[l]);
           }
-          currentPitches[ptrIX] = parseFloat(pitchChanges[i][2][2][j][1]);
+          currentPitches[ptrIX] = parseFloat(pitchChanges[bix][2][2][j][1]);
           notationObj.currentPitch = currentPitches[ptrIX];
-          var timg = notes[2][roundByStep(pitchChanges[i][2][2][j][1], 0.5)];
+          var timg = notes[2][roundByStep(pitchChanges[bix][2][2][j][1], 0.5)];
           notationCont.appendChild(timg);
         } else if (ix >= 12 && ix < 16) {
           var j = ix - 12;
           for (var l = 0; l < notationCont.children.length; l++) {
             notationCont.removeChild(notationCont.children[l]);
           }
-          currentPitches[ptrIX] = parseFloat(pitchChanges[i][2][3][j][1]);
+          currentPitches[ptrIX] = parseFloat(pitchChanges[bix][2][3][j][1]);
           notationObj.currentPitch = currentPitches[ptrIX];
-          var timg = notes[3][roundByStep(pitchChanges[i][2][3][j][1], 0.5)];
+          var timg = notes[3][roundByStep(pitchChanges[bix][2][3][j][1], 0.5)];
           notationCont.appendChild(timg);
         }
       }
