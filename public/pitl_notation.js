@@ -1,4 +1,5 @@
 //<editor-fold> << GLOBAL VARIABLES >> ------------------------------------- //
+console.log('revised:2021_04_11_19:30');
 //<editor-fold>  < GLOBAL VARS - TIMING >                 //
 const FRAMERATE = 60.0;
 const MSPERFRAME = 1000.0 / FRAMERATE;
@@ -878,7 +879,7 @@ function mkNotationObject(ix, ptrIX, w, h, len, placementOrder) {
           for (var l = 0; l < notationCont.children.length; l++) {
             notationCont.removeChild(notationCont.children[l]);
           }
-          currentPitches[ptrIX] = parseFloat(pitchChanges[aix][2][0][ptrIX][1]);
+          currentPitches[ptrIX] = parseFloat(pitchChanges[aix][2][0][ix][1]);
           notationObj.currentPitch = currentPitches[ptrIX];
           var timg = notes[0][roundByStep(pitchChanges[aix][2][0][ix][1], 0.5)];
           notationCont.appendChild(timg);
@@ -1168,7 +1169,7 @@ function mkNotationObject(ix, ptrIX, w, h, len, placementOrder) {
           for (var l = 0; l < notationCont.children.length; l++) {
             notationCont.removeChild(notationCont.children[l]);
           }
-          currentPitches[ptrIX] = parseFloat(pitchChanges[bix][2][0][ptrIX][1]);
+          currentPitches[ptrIX] = parseFloat(pitchChanges[bix][2][0][ix][1]);
           notationObj.currentPitch = currentPitches[ptrIX];
           var timg = notes[0][roundByStep(pitchChanges[bix][2][0][ix][1], 0.5)];
           notationCont.appendChild(timg);
