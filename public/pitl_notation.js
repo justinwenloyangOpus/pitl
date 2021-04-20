@@ -33,6 +33,7 @@ const GOFRETHEIGHT = 4;
 const GOFRETPOSZ = -GOFRETLENGTH / 2;
 const GOFRETWIDTH = 100;
 const CRV_H = 150;
+const PITCH_BTN_H = 50;
 var goFretGeom = new THREE.CubeGeometry(GOFRETWIDTH, GOFRETHEIGHT, GOFRETLENGTH);
 var goFretMatl = new THREE.MeshLambertMaterial({
   color: clr_neonGreen
@@ -88,11 +89,11 @@ let readyBtns = [];
 let actx;
 let tonegain, sawgain;
 let tone, tone2;
-let audResBtn = document.getElementById("audStBtn");
-audResBtn.addEventListener("click", function() {
-  actx.resume();
-  audResBtn.parentNode.removeChild(audResBtn);
-});
+// let audResBtn = document.getElementById("audStBtn");
+// audResBtn.addEventListener("click", function() {
+//   actx.resume();
+//   audResBtn.parentNode.removeChild(audResBtn);
+// });
 
 //</editor-fold> END GLOBAL VARS - AUDIO END
 //<editor-fold>  < GLOBAL VARS - GATES >                 //
@@ -446,6 +447,7 @@ function initAudio() {
 }
 //FUNCTION playTone ------------------------------------------------------ //
 function playTone(freq) {
+  actx.resume();
   tone.frequency.value = freq;
   tone2.frequency.value = freq;
   tonegain.gain.setValueAtTime(0, actx.currentTime + 0.05);
@@ -482,7 +484,8 @@ function mkNotationObject(ix, ptrIX, w, h, len, placementOrder) {
   let partSpacing = 5;
   let runway_offsetY = '0px';
   let runway_autopos = 'none';
-  notation_offsetY = (h + 3).toString();
+  let notation_offsetY = (h + 3).toString();
+  let pitchBtn_offsetY = (h + 3+CRV_H).toString();
   let txoffset;
   if (placementOrder[1] == 1) { //only one part
     runway_offsetX = '0px';
@@ -514,6 +517,14 @@ function mkNotationObject(ix, ptrIX, w, h, len, placementOrder) {
   var crvFollowPanelID = id + 'crvFollowPanel';
   var crvFollowPanel = mkPanel(crvFollowPanelID, crvFollowCanvas, GOFRETWIDTH, CRV_H, "Player " + ix.toString() + " - Curve", ['center-top', notation_offsetX, notation_offsetY, notation_autopos], 'xs');
   notationObj['crvFollowPanel'] = crvFollowPanel;
+  //// Play Pitch Button ////
+  var playPitchBtnCanvasID = id + 'playPitchBtnCanvas';
+  var playPitchBtnCanvas = mkCanvasDiv(playPitchBtnCanvasID, GOFRETWIDTH, PITCH_BTN_H);
+  notationObj['playPitchBtnCanvas'] = playPitchBtnCanvas;
+  var playPitchBtnPanelID = id + 'playPitchBtnPanel';
+  // var playPitchBtnPanel = mkPanel(playPitchBtnPanelID, playPitchBtnCanvas, GOFRETWIDTH, PITCH_BTN_H, "Pitch", ['center-top', notation_offsetX, pitchBtn_offsetY, notation_autopos], 'xs');
+  var playPitchBtnPanel = mkPanel(playPitchBtnPanelID, playPitchBtnCanvas, GOFRETWIDTH, PITCH_BTN_H, "Pitch", ['center-top', notation_offsetX, pitchBtn_offsetY, 'none'], 'xs');
+  notationObj['playPitchBtnPanel'] = playPitchBtnPanel;
   //</editor-fold> END CANVAS, PANELS END
   // <editor-fold>  <<<< NOTATION OBJECT - 3JS >>>> ---------- //
   // Camera ////////////////////////////////
@@ -610,6 +621,7 @@ function mkNotationObject(ix, ptrIX, w, h, len, placementOrder) {
   notationCont.setAttributeNS(null, "x", 0);
   notationCont.style.backgroundColor = "white";
   // Play Pitch Button Here ---->
+  let playPitchBtn = mkButton(playPitchBtnCanvas, id + 'playPitchBtn', GOFRETWIDTH-20, PITCH_BTN_H-20, 0, 0, 'Pitch', 12, function(){playTone(mtof(notationObj.currentPitch))} );
   notationCont.addEventListener('click', function() {
     playTone(mtof(notationObj.currentPitch))
   });
@@ -1762,7 +1774,7 @@ function draw() {
 //<editor-fold>   < UTILITIES - CLOCK >                  //
 let displayClock_div = mkCanvasDiv('displayClock_div', 65, 20, 'yellow');
 let displayClock_panel = mkClockPanel(displayClock_div, 'left-bottom');
-displayClock_panel.smallify();
+// displayClock_panel.smallify();
 
 function calcDisplayClock(pieceEpochTime) {
   let pieceTimeMS = pieceEpochTime - pieceStartTime_epochTime + ((clockAdj-leadTime) * 1000);
